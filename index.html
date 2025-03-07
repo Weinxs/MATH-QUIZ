@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica Matemática</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Práctica Matemática</h2>
+        <p>
+            <label>Operación: </label>
+            <select id="operation">
+                <option value="multiplication">Multiplicación</option>
+                <option value="addition">Suma</option>
+                <option value="subtraction">Resta</option>
+                <option value="division">División</option>
+                <option value="square">X al cuadrado</option>
+                <option value="square-root">Raíz cuadrada</option>
+            </select>
+        </p>
+        <p>
+            <label>Tipo de número: </label>
+            <select id="mode">
+                <option value="all">Todos</option>
+                <option value="even">Pares</option>
+                <option value="odd">Impares</option>
+                <option value="specific">Número específico</option>
+            </select>
+        </p>
+        
+        <!-- Sección para modo secuencial -->
+        <p>
+            <label>
+                <input type="checkbox" id="sequential-mode"> Modo secuencial (1 al 20)
+            </label>
+        </p>
+        
+        <!-- Selección de número específico -->
+        <div id="specific-numbers" style="display: none;">
+            <p>Selecciona el número que deseas practicar:</p>
+            <select id="specific-number-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        
+        <p id="question"></p>
+        <p>Tiempo restante: <span id="timer">10</span> segundos</p>
+        <div class="progress-bar" id="progress-bar"></div>
+        <input type="number" id="answer" placeholder="Tu respuesta">
+        <button id="check-button">Verificar</button>
+        <p id="feedback"></p>
+        <p>Correctas: <span id="correct">0</span> | Incorrectas: <span id="incorrect">0</span></p>
+        <p>Promedio de tiempo por operación:</p>
+        <p>Suma: <span id="avg-addition">0</span> s | Resta: <span id="avg-subtraction">0</span> s | Multiplicación: <span id="avg-multiplication">0</span> s | División: <span id="avg-division">0</span> s | Cuadrado: <span id="avg-square">0</span> s | Raíz cuadrada: <span id="avg-square-root">0</span> s</p>
+    </div>
+    <div id="overlay" style="display:none;">
+        <div class="popup">
+            <p id="popup-message"></p>
+            <button id="accept-modal">Aceptar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
